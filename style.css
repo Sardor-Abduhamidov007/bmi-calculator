@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Noto",sans-serif;
+}
+
+.form-container {
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url(./img/bg-img.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    perspective: 1000px;
+}
+
+.form-container .form-total {
+    width: 400px;
+    height: 500px;
+    background: rgba(255, 255, 255, 0.1);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    transform-style: preserve-3d;
+}
+
+.form-container input {
+    border: none;
+    outline: none;
+    background: rgba(0, 0, 0, 0.1);
+    font-size: 17px;
+    padding: 16px 20px;
+    color: rgba(255, 255, 255, 0.7);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5) inset;
+    margin: 15px 0;
+    letter-spacing: 1px;
+    border-radius: 20px;
+}
+
+.form-container h3 {
+    font-size: 20px;
+    margin-bottom: 25px;
+}
+
+.form-container input[type="submit"] {
+    width: 65%;
+    cursor: pointer;
+    background: linear-gradient(90deg, deeppink, blueviolet);
+    margin: 20px 0 40px;
+    transition: .3s linear;
+    border-radius: 30px;
+}
+
+.form-container input[type="submit"]:hover {
+    letter-spacing: 4px;
+    background: linear-gradient(90deg, blueviolet,deeppink);
+}
+
+.input-gr {
+    position: relative;
+    height: 95px;
+}
+
+.input-gr label {
+    position: absolute;
+    text-align: center;
+    margin-top: 23px;
+    transform: translate(10px, 10px);
+    transform-origin: left;
+    transition: transform .25s;
+    color: darkblue; 
+
+}
+
+.input-gr:focus-within label {
+    transform: translate(0, -35px) scale(.8);
+    color: #000;
+}
+
+.input-gr:focus-within input {
+    outline-color: #000;
+}
